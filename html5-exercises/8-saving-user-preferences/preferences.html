@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving User Preferences</title>
+    <style>
+        .prefs-container {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        select {
+            width: 80%;
+            margin-bottom: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 0.4rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .info {
+            color: #388e3c;
+            margin-top: 1rem;
+        }
+    </style>
+    <script>
+        function savePreference(sel) {
+            localStorage.setItem('eventType', sel.value);
+            sessionStorage.setItem('eventType', sel.value);
+            document.getElementById('info').textContent = 'Preference saved!';
+        }
+        function loadPreference() {
+            var val = localStorage.getItem('eventType');
+            if (val) {
+                document.getElementById('eventType').value = val;
+                document.getElementById('info').textContent = 'Loaded preference: ' + val;
+            }
+        }
+        function clearPrefs() {
+            localStorage.removeItem('eventType');
+            sessionStorage.removeItem('eventType');
+            document.getElementById('eventType').value = '';
+            document.getElementById('info').textContent = 'Preferences cleared.';
+        }
+        window.onload = loadPreference;
+    </script>
+</head>
+<body>
+    <div class="prefs-container">
+        <h2>Choose Your Preferred Event Type</h2>
+        <select id="eventType" onchange="savePreference(this)">
+            <option value="">Select an event</option>
+            <option value="music">Music Night</option>
+            <option value="art">Art Workshop</option>
+            <option value="cleanup">Community Cleanup</option>
+        </select>
+        <br>
+        <button onclick="clearPrefs()">Clear Preferences</button>
+        <div class="info" id="info"></div>
+    </div>
+</body>
+</html> 

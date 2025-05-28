@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback with Events Handling</title>
+    <style>
+        form {
+            max-width: 420px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.7rem 2rem;
+            border-radius: 0.4rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .enlarge {
+            width: 200px;
+            transition: width 0.3s;
+        }
+        .enlarge.big {
+            width: 350px;
+        }
+        .fee {
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .char-count {
+            color: #388e3c;
+            font-size: 0.95rem;
+        }
+    </style>
+    <script>
+        function validatePhone(el) {
+            const val = el.value.trim();
+            if (!/^\d{10}$/.test(val)) {
+                alert('Please enter a valid 10-digit phone number.');
+                el.focus();
+            }
+        }
+        function showFee(sel) {
+            const fee = sel.value === 'music' ? '$10' : sel.value === 'art' ? '$15' : sel.value === 'cleanup' ? 'Free' : '';
+            document.getElementById('fee').textContent = fee;
+        }
+        function showConfirmation() {
+            document.getElementById('output').value = 'Thank you for your feedback!';
+        }
+        function enlargeImg(img) {
+            img.classList.toggle('big');
+        }
+        function countChars(textarea) {
+            document.getElementById('charCount').textContent = textarea.value.length + ' characters';
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="10-digit number" onblur="validatePhone(this)">
+
+        <label for="eventType">Event Type:</label>
+        <select id="eventType" name="eventType" onchange="showFee(this)">
+            <option value="">Select an event</option>
+            <option value="music">Music Night</option>
+            <option value="art">Art Workshop</option>
+            <option value="cleanup">Community Cleanup</option>
+        </select>
+        <span class="fee" id="fee"></span>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="3" onkeyup="countChars(this)"></textarea>
+        <span class="char-count" id="charCount">0 characters</span>
+
+        <button type="button" onclick="showConfirmation()">Submit Feedback</button>
+        <output id="output"></output>
+    </form>
+    <div style="text-align:center; margin-top:2rem;">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Event" class="enlarge" ondblclick="enlargeImg(this)" title="Double-click to enlarge">
+        <div>Double-click the image to enlarge it.</div>
+    </div>
+</body>
+</html> 

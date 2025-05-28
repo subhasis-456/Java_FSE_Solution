@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Forms</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.7rem 2rem;
+            border-radius: 0.4rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .error {
+            color: #c0392b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form id="regForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <div class="error" id="emailError"></div>
+
+        <label for="event">Event:</label>
+        <select id="event" name="event">
+            <option value="">Select an event</option>
+            <option value="music">Music Night</option>
+            <option value="art">Art Workshop</option>
+            <option value="cleanup">Community Cleanup</option>
+        </select>
+        <div class="error" id="eventError"></div>
+
+        <button type="submit">Register</button>
+    </form>
+    <div id="formResult"></div>
+    <script src="forms.js"></script>
+</body>
+</html> 

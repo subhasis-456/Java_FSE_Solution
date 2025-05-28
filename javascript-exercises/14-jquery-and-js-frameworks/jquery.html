@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery and JS Frameworks</title>
+    <style>
+        .event-card {
+            border: 1px solid #007BFF;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .event-card button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+        }
+    </style>
+    <!-- One benefit of frameworks like React or Vue: Component-based architecture for scalable, maintainable UIs. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="eventContainer">
+        <div class="event-card" id="card1">
+            <span>Music Night</span>
+            <button id="registerBtn">Register</button>
+        </div>
+        <div class="event-card" id="card2">
+            <span>Art Workshop</span>
+            <button class="fadeBtn">Remove</button>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+</body>
+</html> 
