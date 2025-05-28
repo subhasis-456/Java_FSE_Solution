@@ -1,0 +1,89 @@
+/* =========================
+   Responsive Navigation
+   ========================= */
+
+.responsive-nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    background: #007BFF;
+    padding: 1rem 0;
+}
+
+.responsive-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    transition: background 0.2s;
+}
+
+.responsive-nav a:hover {
+    background: #0056b3;
+}
+
+/* =========================
+   Responsive Section
+   ========================= */
+
+.responsive-section {
+    max-width: 90vw;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.responsive-img {
+    width: 60vw;
+    max-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.responsive-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.responsive-section p {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* =========================
+   Media Query for < 768px
+   ========================= */
+
+@media (max-width: 768px) {
+    .responsive-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .responsive-nav a {
+        font-size: 1rem;
+        width: 80vw;
+        text-align: center;
+    }
+    .responsive-section {
+        padding: 1rem;
+    }
+    .responsive-img {
+        width: 90vw;
+        max-width: 100%;
+    }
+    .responsive-section h2 {
+        font-size: 1.3rem;
+    }
+    .responsive-section p {
+        font-size: 1rem;
+    }
+} 

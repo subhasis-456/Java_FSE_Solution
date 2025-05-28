@@ -1,0 +1,32 @@
+/* =========================
+   Table Styling
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: #f8f9fa;
+}
+
+th, td {
+    border: 1px solid #b2bec3;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+th {
+    background: #007BFF;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Zebra striping for even rows */
+tbody tr:nth-child(even) {
+    background: #e3f2fd;
+}
+
+tbody tr:nth-child(odd) {
+    background: #ffffff;
+} 

@@ -1,0 +1,30 @@
+/* =========================
+   Main CTA Button Styles
+   ========================= */
+
+/* Style for main CTA button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Hover effect for CTA button */
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* =========================
+   Section Header Styles
+   ========================= */
+
+.section-header {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+} 

@@ -1,0 +1,39 @@
+/* Link Styling */
+a:link {
+    color: #007bff;
+    text-decoration: none;
+}
+a:visited {
+    color: #6610f2;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+a:active {
+    color: #d63384;
+}
+
+/* Nav menu: remove bullets and add spacing */
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Activity list: custom bullets, inside position, spacing */
+.activity-list {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 0;
+}
+.activity-list li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+} 

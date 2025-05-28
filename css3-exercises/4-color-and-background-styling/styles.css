@@ -1,0 +1,45 @@
+/* =========================
+   Body Background Styling
+   ========================= */
+
+body {
+    background: #e0f7fa url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') no-repeat center center fixed;
+    background-size: cover;
+    /* Fallback color for background image */
+}
+
+/* =========================
+   Section Header Gradient
+   ========================= */
+
+.section-header {
+    background: linear-gradient(90deg, #007BFF 0%, #00c6ff 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+/* =========================
+   Event Section Styling
+   ========================= */
+
+.event-section {
+    background: rgba(255,255,255,0.85);
+    border: 1px solid #b2ebf2;
+    border-radius: 0.75rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.event-section h3 {
+    color: #007BFF;
+}
+
+.event-section p {
+    color: #333;
+} 

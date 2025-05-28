@@ -1,0 +1,11 @@
+/* Header styles */
+h2 {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.1rem;
+    color: #333;
+} 
